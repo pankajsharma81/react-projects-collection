@@ -4,6 +4,10 @@ import { HiMail } from "react-icons/hi";
 import styles from "./Contact.module.css";
 
 const ContactForm = () => {
+  const viaCall = () => {
+    console.log("Clicked Call Button");
+  };
+
   return (
     <section className={styles.container}>
       <div className={styles.contact_form}>
@@ -12,7 +16,11 @@ const ContactForm = () => {
             text="VIA SUPPORT CHAT"
             icon={<MdMessage fontSize="24px" />}
           />
-          <Button text="VIA CALL" icon={<MdCall fontSize="24px" />} />
+          <Button
+            onClick={viaCall}
+            text="VIA CALL"
+            icon={<MdCall fontSize="24px" />}
+          />
         </div>
 
         <Button
@@ -24,7 +32,7 @@ const ContactForm = () => {
         <form>
           <div className={styles.form_control}>
             <label htmlFor="name">Name</label>
-            <input type="text" name="name" />
+            <input type="text" name="fname" />
           </div>
 
           <div className={styles.form_control}>
@@ -34,7 +42,7 @@ const ContactForm = () => {
 
           <div className={styles.form_control}>
             <label htmlFor="text">text</label>
-            <textarea name="text" rows="8"/>
+            <textarea name="text" rows="8" />
           </div>
 
           <div style={{ display: "flex", justifyContent: "end" }}>
@@ -44,7 +52,7 @@ const ContactForm = () => {
       </div>
 
       <div className={styles.contact_image}>
-      <img src="/public/images/Service 24_7-pana 1.svg" alt="" />
+        <img src="/public/images/Service 24_7-pana 1.svg" alt="" />
       </div>
     </section>
   );
