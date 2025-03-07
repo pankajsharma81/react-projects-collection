@@ -1,10 +1,8 @@
-import Button from "@mui/material/Button";
+import SearchBox from "./SearchBox";
 function App() {
   return (
     <>
-      <Button variant="contained" color="success">
-        Success
-      </Button>
+      <SearchBox/>
     </>
   );
 }
